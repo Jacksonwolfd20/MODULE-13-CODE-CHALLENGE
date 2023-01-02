@@ -8,8 +8,14 @@ class Product extends Model {}
 
 // set up fields and rules for Product model
 Product.init(
-//define
   {
+    // define columns
+    /* {
+      product_name: "Basketball",
+      price: 200.00,
+      stock: 3,
+      tagIds: [1, 2, 3, 4]
+    } */
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -21,27 +27,14 @@ Product.init(
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL,
-      allownull: false,
-      validate: {
-        isDecimal: true
-      }
-    },
-    stock: {
-      type: DataTypes. INTEGER,
-      allowNull: false,
-      defaultValue: 10,
-      Validate: {
-        isNumeric: true
-      }
-    },
-    category_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key:'id'
-      }
-    }
+      allowNull: false,
+      },
+      stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        },
+        
   },
   {
     sequelize,

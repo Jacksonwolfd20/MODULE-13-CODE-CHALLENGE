@@ -5,7 +5,6 @@ const sequelize = require('../config/connection.js');
 class Category extends Model {}
 
 Category.init(
-  //define
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,7 +12,6 @@ Category.init(
       primaryKey: true,
       autoIncrement: true
     },
-//define category name 
     category_name: {
       type: DataTypes.STRING,
       allowNull: false
